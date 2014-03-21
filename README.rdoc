@@ -1,0 +1,19 @@
+= Simple Fanout: Send Messages to Fanout.io using simple HTTP POST requests
+
+It's easy!
+
+  > channel = (channel name to publish to)
+  > client = SimpleFanout::Client.new
+  > client.send('jazz hands!')
+
+  Viola!
+
+Feel free to specify your id, key, or channel when initializing, if you want.
+
+  > client = SimpleFanout::Client.new(id: '123581321', key: 'somekey', channel: 'danceparty')
+
+Make sure you create a `simple_fanout.yml` file in your config directory that looks something like:
+
+    realm_id: (your Fanout.io id)
+    realm_key: (your Fanout.io id)
+    default_channel: (default channel name)
